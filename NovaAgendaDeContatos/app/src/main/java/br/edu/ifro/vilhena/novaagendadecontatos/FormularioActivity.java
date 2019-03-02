@@ -19,6 +19,7 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import java.io.File;
+import java.util.List;
 
 import br.edu.ifro.vilhena.novaagendadecontatos.dao.ContatoDAO;
 import br.edu.ifro.vilhena.novaagendadecontatos.model.Contato;
@@ -40,6 +41,7 @@ public class FormularioActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_formulario);
+
 
         formularioBtn = findViewById(R.id.formulario_btn);
         formularioNome = findViewById(R.id.formulario_nome);
@@ -120,12 +122,10 @@ public class FormularioActivity extends AppCompatActivity {
 
     private void carregarImagem(String caminhoFoto) {
 
-
-        Bitmap bitmap = BitmapFactory.decodeFile(caminhoFoto);
-
-        if (bitmap != null){
+        if (caminhoFoto != null){
+            Bitmap bitmap = BitmapFactory.decodeFile(caminhoFoto);
             Bitmap bitmapReduzido = Bitmap.createScaledBitmap(bitmap, 300, 300, true);
-            formularioBtnFoto.setImageBitmap(bitmapReduzido);
+            formularioFoto.setImageBitmap(bitmapReduzido);
             formularioFoto.setScaleType(ImageView.ScaleType.FIT_XY);
             formularioFoto.setTag(caminhoFoto);
         }

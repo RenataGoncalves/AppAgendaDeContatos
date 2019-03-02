@@ -36,7 +36,8 @@
         <android.support.design.widget.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/formulario_nome"/>
+            android:id="@+id/formulario_nome"
+            android:inputType="text"/>
     </android.support.design.widget.TextInputLayout>
 
     <android.support.design.widget.TextInputLayout
@@ -46,17 +47,20 @@
         <android.support.design.widget.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/formulario_email"/>
+            android:id="@+id/formulario_email"
+            android:inputType="text"/>
     </android.support.design.widget.TextInputLayout>
 
     <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Telefone">
+
         <android.support.design.widget.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/formulario_telefone"/>
+            android:id="@+id/formulario_telefone"
+            android:inputType="text"/>
     </android.support.design.widget.TextInputLayout>
 
     <Button

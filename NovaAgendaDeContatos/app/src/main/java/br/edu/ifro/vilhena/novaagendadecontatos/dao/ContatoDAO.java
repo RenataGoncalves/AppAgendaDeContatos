@@ -89,6 +89,7 @@ public class ContatoDAO extends SQLiteOpenHelper {
         dados.put("nome", contato.getNome());
         dados.put("email", contato.getEmail());
         dados.put("telefone", contato.getTelefone());
+        dados.put("caminhoFoto",contato.getCaminhoFoto());
 
         String[] parametros = {String.valueOf(contato.getId())};
         db.update("contatos", dados, "id = ?", parametros);

@@ -32,6 +32,7 @@ public class ListarActivity extends AppCompatActivity {
         //String[] contatos = {"Maria", "João", "José"};
 
 
+
         listarAcao.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -69,7 +70,8 @@ public class ListarActivity extends AppCompatActivity {
         List<Contato> contatos = contatoDAO.listar();
         contatoDAO.close();
 
-        ArrayAdapter<Contato> adapter = new ArrayAdapter<Contato>(this, android.R.layout.simple_list_item_1, contatos);
+        AdapterPersonalizadaContato adapter = new AdapterPersonalizadaContato(contatos, this);
+
         listarContatos.setAdapter(adapter);
     }
 
